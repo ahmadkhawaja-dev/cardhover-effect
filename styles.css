@@ -1,0 +1,110 @@
+body {
+    background-image: linear-gradient(90deg, #36454F 100%, #36454F 0%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .container {
+    width: 1000px;
+    margin-top: 80px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .container .card {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .container .card .appear {
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+  }
+  
+  .container .card .appear.first {
+    position: relative;
+    border-radius: 15px;
+    background: #272727;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    transform: translateY(100px);
+  }
+  
+  .container .card:hover .appear.first {
+    background: #3a3a3a;
+    transform: translateX(0);
+    border-radius: 15px 15px 0 0;
+  }
+  
+  .container .card .appear.first .content {
+    opacity: 0.3;
+    transition: 0.5s;
+  }
+  
+  .container .card:hover .appear.first .content {
+    opacity: 1;
+  }
+  
+  .container .card .appear.first img {
+    max-width: 100px;
+    filter: invert(1);
+  }
+  
+  .container .card .appear.first h3 {
+    margin: 10px 0 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+  }
+  
+  .container .card .appear.second {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: #fff;
+    box-sizing: border-box;
+    border-radius: 18px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+  }
+  
+  .container .card:hover .appear.second {
+    transform: translateY(0);
+    border-radius: 0 0 15px 15px;
+  }
+  
+  .container .card .appear.second .content p {
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  .container .card .appear.second .content a {
+    text-decoration: none;
+    margin: 15px 0;
+    display: inline-block;
+    font-weight: 900;
+    color: #333;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 15px;
+    opacity: 0;
+    transition: opacity 0.3s;
+
+  }
+  
+  .container .card:hover .appear.second .content a {
+    opacity: 1;
+  }
+  
